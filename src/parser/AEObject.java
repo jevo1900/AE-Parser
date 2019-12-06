@@ -16,6 +16,11 @@ public class AEObject {
     AEAttrList attrs=new AEAttrList();
     AEList child=new AEList();
 
+    public AEObject(int padre, String key, String value) {
+        this.padre = padre;
+        this.key = key;
+        this.value = value;
+    } 
     
     public AEObject(String key, String value) {
         this(-1, key, value);
@@ -24,12 +29,7 @@ public class AEObject {
     public AEObject(int padre, String key) {
         this(padre, key, null);
     }
-    
-    public AEObject(int padre, String key, String value) {
-        this.padre = padre;
-        this.key = key;
-        this.value = value;
-    }
+
 
     public AEAttrList getAttrs() {
         return attrs;
