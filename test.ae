@@ -1,0 +1,15 @@
+["key":
+    ["key":
+        ["key":"value1" 'attr 01'='attr value 1' 'attr 02'='attr value 2'],
+        ["key":
+            ["key":
+                ["key":"value" 'attr 1'='attr value 1'],
+                ["key":"value"]
+            'attr 2'='attr value 1'],
+            ["key":
+                ["key":"value 1"]
+            ]
+        ]
+    ],
+    ["key":"value"] 
+]
