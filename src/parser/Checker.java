@@ -16,6 +16,7 @@ class Checker {
     final static String dDot = ":";
     final static String cont = "([\\w| ])+";
     final static String attr = "( '"+cont+"'='"+cont+"')*";
+    final static String attrClosed = attr+close;
     final static String opened = open + comillas + cont + comillas + dDot;
     final static String closed = comillas + cont + comillas + attr + close;
     final static String full = opened + closed + "(,)?";
@@ -76,7 +77,14 @@ class Checker {
             }
             return aeObject;
         } else {
-            return null;
+            AEObject aeObject = new AEObject(null, null);
+            if (val.contains("'")) {
+                AEAttrList parseAttrs = parseAttrs(val.substring(val.indexOf("'")));
+                for (AEAttr parseAttr : parseAttrs) {
+                    aeObject.addAttr(parseAttr);
+                }
+            }
+            return aeObject;
         }
     }
     
