@@ -17,5 +17,5 @@ The AE File format was designed having json as model, but it accept attributes i
         ]
     ],
     ["key":"value"] 
-]
+'attr 1'='attr value 1']
 ```
